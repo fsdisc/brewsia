@@ -1,0 +1,64 @@
+<html>
+<style>
+body { margin: 0px; font-family: Arial, sans-serif; font-size: 12px; }
+.topbar { height: 30px; border-bottom: solid 1px teal; padding: 5px; }
+.topbar .menuitem { padding: 0px 5px 0px 5px; color: teal; text-decoration: none; cursor: pointer; cursor: hand; }
+.topbar .menuitem:hover { text-decoration: underline; }
+.topbar .separator { margin: 0px 5px 0px 5px; border-right: solid 1px silver; }
+.search-pane { margin-top: 20px; width: 400px; }
+.search-pane .textbox { border: solid 1px teal; width: 300px; }
+.search-pane .button { border: solid 1px teal; background-color: white; border-left: solid 5px teal; cursor: pointer; cursor: hand; padding: 1px 5px 1px 5px; color: black; height: 18px; }
+.search-result { margin: 20px 0px 20px 0px; }
+.search-result .link { margin-top: 5px; font-family: Arial, sans-serif; font-size: 12px; color: grey; }
+.search-result .title { margin-top: 5px; }
+.search-result .title a { font-family: Arial, sans-serif; font-size: 12px; color: teal; text-decoration: none; }
+.search-result .title a:hover { text-decoration: underline; }
+.search-result .desc { font-family: Arial, sans-serif; font-size: 12px; margin-top: 10px; margin-bottom: 10px; }
+.search-result td { border-bottom: solid 1px teal; }
+.search-result .page-list td { border: none; }
+.search-result .page-list .page { padding: 1px 5px 1px 5px; border: solid 1px gainsboro; margin-right: 5px; font-family: Arial, sans-serif; font-size: 12px; float: left; cursor: pointer; cursor: hand; }
+.search-result .page-list .page:hover { color: teal; }
+.search-result .page-list .curpage { padding: 1px 5px 1px 5px; border: solid 1px teal; margin-right: 5px; font-family: Arial, sans-serif; font-size: 12px; float: left; cursor: pointer; cursor: hand; }
+.search-result .page-list .curpage:hover { color: teal; }
+</style>
+<body>
+  <script>
+  var pageno = '$pageno$';
+  var stage = '';
+  var changed = false;
+  function go(src) {
+    stage = src;
+    changed = true;
+  }
+  function ask() {
+    changed = false;
+    return stage;
+  }
+  function getTerm() {
+    var tag = document.getElementById("search-term");
+    return tag.value;
+  }
+  function getPage() {
+    return pageno;
+  }
+  </script>
+  <div class="topbar">
+    <a class="menuitem" onclick="go('Engine')">Engine</a>
+    <span class="separator">&nbsp;</span>
+    <a class="menuitem" onclick="go('Spider')">Spider</a>
+  </div>
+  <center>
+  <div class="search-pane">
+  	<input id="search-term" type="text" class="textbox" />&nbsp;&nbsp;<span class="button" onclick="pageno='1';go('Search');" >Search</span>
+  </div>
+  </center>
+  <script>
+var q = "$query$";
+var tag = document.getElementById("search-term");
+q = q.replace(/~q/g, '"');
+q = q.replace(/~t/g, '~');
+tag.value = q;
+  </script>
+  $results$
+</body>
+</html>

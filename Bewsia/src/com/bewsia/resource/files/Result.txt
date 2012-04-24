@@ -1,0 +1,5 @@
+<table class="search-result" width="100%" cellpadding="0px" cellspacing="0px">
+$pagelist$
+$item$
+$pagelist$
+</table>
