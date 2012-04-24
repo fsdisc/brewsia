@@ -1,0 +1,7 @@
+<tr class="page-list">
+  <td width="10px" style="border: none">&nbsp;</td>
+  <td style="padding: 5px 0px 5px 0px">
+$item$
+  </td>
+  <td width="10px" style="border: none">&nbsp;</td>
+</tr>

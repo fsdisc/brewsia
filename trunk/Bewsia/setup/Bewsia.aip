@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" CreateVersion="7.2.1" version="7.2.1" modules="java" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_MINJREVERSION" MultiBuildValue="DefaultBuild:1.6" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="BannerBitmap" MultiBuildValue="DefaultBuild:banner_image.jpg" Type="1"/>
+    <ROW Property="DialogBitmap" MultiBuildValue="DefaultBuild:dialog_image.jpg" Type="1"/>
+    <ROW Property="Manufacturer" Value="bHive F" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{453EFED3-D4BC-49CC-9C41-94A70E9AA1B5} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Bewsia - Micro Search Engine for Desktop" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{30FB2E16-4FA2-4A56-85D2-68FA6DD736CD}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Bewsia_DIR" Directory_Parent="APPDIR" DefaultDir="bin"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="basic_DIR" Directory_Parent="bewsia_DIR" DefaultDir="basic"/>
+    <ROW Directory="bewsia_DIR" Directory_Parent="com_DIR" DefaultDir="bewsia"/>
+    <ROW Directory="cfg_DIR" Directory_Parent="APPDIR" DefaultDir="cfg"/>
+    <ROW Directory="com_DIR" Directory_Parent="Bewsia_DIR" DefaultDir="com"/>
+    <ROW Directory="dat_DIR" Directory_Parent="APPDIR" DefaultDir="dat"/>
+    <ROW Directory="engine_DIR" Directory_Parent="dat_DIR" DefaultDir="engine"/>
+    <ROW Directory="files_DIR" Directory_Parent="resource_DIR" DefaultDir="files"/>
+    <ROW Directory="images_DIR" Directory_Parent="resource_DIR" DefaultDir="images"/>
+    <ROW Directory="jsoup_DIR" Directory_Parent="safe_DIR" DefaultDir="jsoup"/>
+    <ROW Directory="log_DIR" Directory_Parent="APPDIR" DefaultDir="log"/>
+    <ROW Directory="lucene_DIR" Directory_Parent="safe_DIR" DefaultDir="lucene"/>
+    <ROW Directory="resource_DIR" Directory_Parent="bewsia_DIR" DefaultDir="resource"/>
+    <ROW Directory="safe_DIR" Directory_Parent="script_DIR" DefaultDir="safe"/>
+    <ROW Directory="schema_DIR" Directory_Parent="bewsia_DIR" DefaultDir="schema"/>
+    <ROW Directory="script_1_DIR" Directory_Parent="dat_DIR" DefaultDir="script"/>
+    <ROW Directory="script_DIR" Directory_Parent="bewsia_DIR" DefaultDir="script"/>
+    <ROW Directory="view_DIR" Directory_Parent="bewsia_DIR" DefaultDir="view"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{CA5920D0-49D1-47B1-B016-22550BBAE6DC}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="AddEngineDialog_1.class" ComponentId="{6CF3DE50-4DA1-42DB-BBD7-F02AF1755872}" Directory_="view_DIR" Attributes="0" KeyPath="AddEngineDialog_1.class" Type="0"/>
+    <ROW Component="Bewsia.exe" ComponentId="{31849B7C-B563-4038-B0C4-75FC90CB4189}" Directory_="APPDIR" Attributes="0" KeyPath="Bewsia.exe"/>
+    <ROW Component="CodeTool.class" ComponentId="{211E4C69-F39A-446C-9D69-720AD48B904A}" Directory_="basic_DIR" Attributes="0" KeyPath="CodeTool.class" Type="0"/>
+    <ROW Component="Files.class" ComponentId="{853B8B96-B38A-413A-A5E5-C094E07CC81B}" Directory_="resource_DIR" Attributes="0" KeyPath="Files.class" Type="0"/>
+    <ROW Component="Home.txt" ComponentId="{407EA72D-5B1D-41D8-A6DC-44F0D67834D6}" Directory_="files_DIR" Attributes="0" KeyPath="Home.txt" Type="0"/>
+    <ROW Component="LuceneHandler_CreateTask.class" ComponentId="{1348B434-E693-46F4-A336-604FCE4A5E14}" Directory_="script_DIR" Attributes="0" KeyPath="LuceneHandler_CreateTask.class" Type="0"/>
+    <ROW Component="SConnection.class" ComponentId="{58522CF5-EB86-4425-9981-9E4241F67ECC}" Directory_="jsoup_DIR" Attributes="0" KeyPath="SConnection.class" Type="0"/>
+    <ROW Component="SEntity_Handler.class" ComponentId="{9F14772D-C70E-481A-A258-2B880A80525C}" Directory_="lucene_DIR" Attributes="0" KeyPath="SEntity_Handler.class" Type="0"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{92E9088A-0E3F-4ABB-B89C-56185B36A1EA}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="Spider.class" ComponentId="{A107E082-DDB4-4BEC-B7CA-351340EE4BF6}" Directory_="schema_DIR" Attributes="0" KeyPath="Spider.class" Type="0"/>
+    <ROW Component="amazon_category.js" ComponentId="{EA2FF086-64EC-432E-BE47-2B46DAC9348D}" Directory_="script_1_DIR" Attributes="0" KeyPath="amazon_category.js" Type="0"/>
+    <ROW Component="bewsia_16x16.png" ComponentId="{FA4169AA-DAC8-48FC-9402-41A2B7DAA1E8}" Directory_="images_DIR" Attributes="0" KeyPath="bewsia_16x16.png" Type="0"/>
+    <ROW Component="config.properties" ComponentId="{B270E1B8-05EC-478D-841B-E59F203143D8}" Directory_="cfg_DIR" Attributes="0" KeyPath="config.properties" Type="0"/>
+    <ROW Component="engine" ComponentId="{D8D56643-CE64-42F5-8015-177C01DBFB85}" Directory_="engine_DIR" Attributes="0"/>
+    <ROW Component="jsoup_1.3.3.jar" ComponentId="{509843CC-8830-4ED6-AEF7-C0C7E307E535}" Directory_="Bewsia_DIR" Attributes="0" KeyPath="jsoup_1.3.3.jar" Type="0"/>
+    <ROW Component="log" ComponentId="{8217A2DD-5A34-4594-91FF-628F01867168}" Directory_="log_DIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="Bewsia.exe CodeTool.class Home.txt Files.class bewsia_16x16.png Spider.class LuceneHandler_CreateTask.class SConnection.class SEntity_Handler.class AddEngineDialog_1.class jsoup_1.3.3.jar config.properties log amazon_category.js engine SHORTCUTDIR AI_ExePath"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AddEngineDialog.class" Component_="AddEngineDialog_1.class" FileName="AddEng~4.cla|AddEngineDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddEngineDialog.class" SelfReg="false" Sequence="35"/>
+    <ROW File="AddEngineDialog_1.class" Component_="AddEngineDialog_1.class" FileName="AddEng~1.cla|AddEngineDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddEngineDialog$1.class" SelfReg="false" Sequence="32"/>
+    <ROW File="AddEngineDialog_2.class" Component_="AddEngineDialog_1.class" FileName="AddEng~2.cla|AddEngineDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddEngineDialog$2.class" SelfReg="false" Sequence="33"/>
+    <ROW File="AddEngineDialog_3.class" Component_="AddEngineDialog_1.class" FileName="AddEng~3.cla|AddEngineDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddEngineDialog$3.class" SelfReg="false" Sequence="34"/>
+    <ROW File="AddSpiderDialog.class" Component_="AddEngineDialog_1.class" FileName="AddSpi~4.cla|AddSpiderDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddSpiderDialog.class" SelfReg="false" Sequence="39"/>
+    <ROW File="AddSpiderDialog_1.class" Component_="AddEngineDialog_1.class" FileName="AddSpi~1.cla|AddSpiderDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddSpiderDialog$1.class" SelfReg="false" Sequence="36"/>
+    <ROW File="AddSpiderDialog_2.class" Component_="AddEngineDialog_1.class" FileName="AddSpi~2.cla|AddSpiderDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddSpiderDialog$2.class" SelfReg="false" Sequence="37"/>
+    <ROW File="AddSpiderDialog_3.class" Component_="AddEngineDialog_1.class" FileName="AddSpi~3.cla|AddSpiderDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\AddSpiderDialog$3.class" SelfReg="false" Sequence="38"/>
+    <ROW File="Bewsia.exe" Component_="Bewsia.exe" FileName="Bewsia.exe" Attributes="0" SourcePath="&lt;AI_STUBS&gt;aijclw.exe" SelfReg="false" Sequence="1" DigSign="true"/>
+    <ROW File="CodeTool.class" Component_="CodeTool.class" FileName="CodeTo~1.cla|CodeTool.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\CodeTool.class" SelfReg="false" Sequence="2"/>
+    <ROW File="Config.class" Component_="CodeTool.class" FileName="Config~1.cla|Config.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\Config.class" SelfReg="false" Sequence="3"/>
+    <ROW File="Controller.class" Component_="CodeTool.class" FileName="Contro~1.cla|Controller.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\Controller.class" SelfReg="false" Sequence="4"/>
+    <ROW File="Crypto.class" Component_="CodeTool.class" FileName="Crypto~1.cla|Crypto.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\Crypto.class" SelfReg="false" Sequence="5"/>
+    <ROW File="EditEngineDialog.class" Component_="AddEngineDialog_1.class" FileName="EditEn~4.cla|EditEngineDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditEngineDialog.class" SelfReg="false" Sequence="43"/>
+    <ROW File="EditEngineDialog_1.class" Component_="AddEngineDialog_1.class" FileName="EditEn~1.cla|EditEngineDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditEngineDialog$1.class" SelfReg="false" Sequence="40"/>
+    <ROW File="EditEngineDialog_2.class" Component_="AddEngineDialog_1.class" FileName="EditEn~2.cla|EditEngineDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditEngineDialog$2.class" SelfReg="false" Sequence="41"/>
+    <ROW File="EditEngineDialog_3.class" Component_="AddEngineDialog_1.class" FileName="EditEn~3.cla|EditEngineDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditEngineDialog$3.class" SelfReg="false" Sequence="42"/>
+    <ROW File="EditSpiderDialog.class" Component_="AddEngineDialog_1.class" FileName="EditSp~4.cla|EditSpiderDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditSpiderDialog.class" SelfReg="false" Sequence="47"/>
+    <ROW File="EditSpiderDialog_1.class" Component_="AddEngineDialog_1.class" FileName="EditSp~1.cla|EditSpiderDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditSpiderDialog$1.class" SelfReg="false" Sequence="44"/>
+    <ROW File="EditSpiderDialog_2.class" Component_="AddEngineDialog_1.class" FileName="EditSp~2.cla|EditSpiderDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditSpiderDialog$2.class" SelfReg="false" Sequence="45"/>
+    <ROW File="EditSpiderDialog_3.class" Component_="AddEngineDialog_1.class" FileName="EditSp~3.cla|EditSpiderDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\EditSpiderDialog$3.class" SelfReg="false" Sequence="46"/>
+    <ROW File="Files.class" Component_="Files.class" FileName="Files~1.cla|Files.class" Attributes="0" SourcePath="..\bin\com\bewsia\resource\Files.class" SelfReg="false" Sequence="13"/>
+    <ROW File="Home.txt" Component_="Home.txt" FileName="Home.txt" Attributes="0" SourcePath="..\bin\com\bewsia\resource\files\Home.txt" SelfReg="false" Sequence="8"/>
+    <ROW File="Images.class" Component_="Files.class" FileName="Images~1.cla|Images.class" Attributes="0" SourcePath="..\bin\com\bewsia\resource\Images.class" SelfReg="false" Sequence="16"/>
+    <ROW File="Labels.class" Component_="Files.class" FileName="Labels~1.cla|Labels.class" Attributes="0" SourcePath="..\bin\com\bewsia\resource\Labels.class" SelfReg="false" Sequence="17"/>
+    <ROW File="Labels.properties" Component_="Files.class" FileName="Labels~1.pro|Labels.properties" Attributes="0" SourcePath="..\bin\com\bewsia\resource\Labels.properties" SelfReg="false" Sequence="18"/>
+    <ROW File="ListEngineDialog.class" Component_="AddEngineDialog_1.class" FileName="ListEn~6.cla|ListEngineDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog.class" SelfReg="false" Sequence="53"/>
+    <ROW File="ListEngineDialog_1.class" Component_="AddEngineDialog_1.class" FileName="ListEn~1.cla|ListEngineDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog$1.class" SelfReg="false" Sequence="48"/>
+    <ROW File="ListEngineDialog_2.class" Component_="AddEngineDialog_1.class" FileName="ListEn~2.cla|ListEngineDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog$2.class" SelfReg="false" Sequence="49"/>
+    <ROW File="ListEngineDialog_3.class" Component_="AddEngineDialog_1.class" FileName="ListEn~3.cla|ListEngineDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog$3.class" SelfReg="false" Sequence="50"/>
+    <ROW File="ListEngineDialog_4.class" Component_="AddEngineDialog_1.class" FileName="ListEn~4.cla|ListEngineDialog$4.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog$4.class" SelfReg="false" Sequence="51"/>
+    <ROW File="ListEngineDialog_5.class" Component_="AddEngineDialog_1.class" FileName="ListEn~5.cla|ListEngineDialog$5.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListEngineDialog$5.class" SelfReg="false" Sequence="52"/>
+    <ROW File="ListSpiderDialog.class" Component_="AddEngineDialog_1.class" FileName="ListSp~6.cla|ListSpiderDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog.class" SelfReg="false" Sequence="59"/>
+    <ROW File="ListSpiderDialog_1.class" Component_="AddEngineDialog_1.class" FileName="ListSp~1.cla|ListSpiderDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog$1.class" SelfReg="false" Sequence="54"/>
+    <ROW File="ListSpiderDialog_2.class" Component_="AddEngineDialog_1.class" FileName="ListSp~2.cla|ListSpiderDialog$2.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog$2.class" SelfReg="false" Sequence="55"/>
+    <ROW File="ListSpiderDialog_3.class" Component_="AddEngineDialog_1.class" FileName="ListSp~3.cla|ListSpiderDialog$3.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog$3.class" SelfReg="false" Sequence="56"/>
+    <ROW File="ListSpiderDialog_4.class" Component_="AddEngineDialog_1.class" FileName="ListSp~4.cla|ListSpiderDialog$4.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog$4.class" SelfReg="false" Sequence="57"/>
+    <ROW File="ListSpiderDialog_5.class" Component_="AddEngineDialog_1.class" FileName="ListSp~5.cla|ListSpiderDialog$5.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\ListSpiderDialog$5.class" SelfReg="false" Sequence="58"/>
+    <ROW File="LuceneHandler.class" Component_="LuceneHandler_CreateTask.class" FileName="Lucene~5.cla|LuceneHandler.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\LuceneHandler.class" SelfReg="false" Sequence="24"/>
+    <ROW File="LuceneHandler_CreateTask.class" Component_="LuceneHandler_CreateTask.class" FileName="Lucene~1.cla|LuceneHandler$CreateTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\LuceneHandler$CreateTask.class" SelfReg="false" Sequence="20"/>
+    <ROW File="LuceneHandler_DeleteTask.class" Component_="LuceneHandler_CreateTask.class" FileName="Lucene~2.cla|LuceneHandler$DeleteTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\LuceneHandler$DeleteTask.class" SelfReg="false" Sequence="21"/>
+    <ROW File="LuceneHandler_Monitor.class" Component_="LuceneHandler_CreateTask.class" FileName="Lucene~3.cla|LuceneHandler$Monitor.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\LuceneHandler$Monitor.class" SelfReg="false" Sequence="22"/>
+    <ROW File="LuceneHandler_UpdateTask.class" Component_="LuceneHandler_CreateTask.class" FileName="Lucene~4.cla|LuceneHandler$UpdateTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\LuceneHandler$UpdateTask.class" SelfReg="false" Sequence="23"/>
+    <ROW File="Machine.class" Component_="LuceneHandler_CreateTask.class" FileName="Machin~3.cla|Machine.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\Machine.class" SelfReg="false" Sequence="27"/>
+    <ROW File="Machine_1.class" Component_="LuceneHandler_CreateTask.class" FileName="Machin~1.cla|Machine$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\Machine$1.class" SelfReg="false" Sequence="25"/>
+    <ROW File="Machine_Handler.class" Component_="LuceneHandler_CreateTask.class" FileName="Machin~2.cla|Machine$Handler.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\Machine$Handler.class" SelfReg="false" Sequence="26"/>
+    <ROW File="MainWindow.class" Component_="AddEngineDialog_1.class" FileName="MainWi~8.cla|MainWindow.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow.class" SelfReg="false" Sequence="67"/>
+    <ROW File="MainWindow_1.class" Component_="AddEngineDialog_1.class" FileName="MainWi~1.cla|MainWindow$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$1.class" SelfReg="false" Sequence="60"/>
+    <ROW File="MainWindow_ListEngineTask.class" Component_="AddEngineDialog_1.class" FileName="MainWi~3.cla|MainWindow$ListEngineTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$ListEngineTask.class" SelfReg="false" Sequence="62"/>
+    <ROW File="MainWindow_ListEngineTask_1.class" Component_="AddEngineDialog_1.class" FileName="MainWi~2.cla|MainWindow$ListEngineTask$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$ListEngineTask$1.class" SelfReg="false" Sequence="61"/>
+    <ROW File="MainWindow_ListSpiderTask.class" Component_="AddEngineDialog_1.class" FileName="MainWi~5.cla|MainWindow$ListSpiderTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$ListSpiderTask.class" SelfReg="false" Sequence="64"/>
+    <ROW File="MainWindow_ListSpiderTask_1.class" Component_="AddEngineDialog_1.class" FileName="MainWi~4.cla|MainWindow$ListSpiderTask$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$ListSpiderTask$1.class" SelfReg="false" Sequence="63"/>
+    <ROW File="MainWindow_MenuTask.class" Component_="AddEngineDialog_1.class" FileName="MainWi~7.cla|MainWindow$MenuTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$MenuTask.class" SelfReg="false" Sequence="66"/>
+    <ROW File="MainWindow_MenuTask_1.class" Component_="AddEngineDialog_1.class" FileName="MainWi~6.cla|MainWindow$MenuTask$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\MainWindow$MenuTask$1.class" SelfReg="false" Sequence="65"/>
+    <ROW File="Result.txt" Component_="Home.txt" FileName="Result.txt" Attributes="0" SourcePath="..\bin\com\bewsia\resource\files\Result.txt" SelfReg="false" Sequence="9"/>
+    <ROW File="ResultItem.txt" Component_="Home.txt" FileName="Result~1.txt|ResultItem.txt" Attributes="0" SourcePath="..\bin\com\bewsia\resource\files\ResultItem.txt" SelfReg="false" Sequence="10"/>
+    <ROW File="ResultPageItem.txt" Component_="Home.txt" FileName="Result~2.txt|ResultPageItem.txt" Attributes="0" SourcePath="..\bin\com\bewsia\resource\files\ResultPageItem.txt" SelfReg="false" Sequence="11"/>
+    <ROW File="ResultPageList.txt" Component_="Home.txt" FileName="Result~3.txt|ResultPageList.txt" Attributes="0" SourcePath="..\bin\com\bewsia\resource\files\ResultPageList.txt" SelfReg="false" Sequence="12"/>
+    <ROW File="RunSpiderDialog.class" Component_="AddEngineDialog_1.class" FileName="RunSpi~5.cla|RunSpiderDialog.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\RunSpiderDialog.class" SelfReg="false" Sequence="72"/>
+    <ROW File="RunSpiderDialog_1.class" Component_="AddEngineDialog_1.class" FileName="RunSpi~1.cla|RunSpiderDialog$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\RunSpiderDialog$1.class" SelfReg="false" Sequence="68"/>
+    <ROW File="RunSpiderDialog_DataHandler.class" Component_="AddEngineDialog_1.class" FileName="RunSpi~3.cla|RunSpiderDialog$DataHandler.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\RunSpiderDialog$DataHandler.class" SelfReg="false" Sequence="70"/>
+    <ROW File="RunSpiderDialog_DataHandler_1.class" Component_="AddEngineDialog_1.class" FileName="RunSpi~2.cla|RunSpiderDialog$DataHandler$1.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\RunSpiderDialog$DataHandler$1.class" SelfReg="false" Sequence="69"/>
+    <ROW File="RunSpiderDialog_RunTask.class" Component_="AddEngineDialog_1.class" FileName="RunSpi~4.cla|RunSpiderDialog$RunTask.class" Attributes="0" SourcePath="..\bin\com\bewsia\view\RunSpiderDialog$RunTask.class" SelfReg="false" Sequence="71"/>
+    <ROW File="Runner.class" Component_="CodeTool.class" FileName="Runner~1.cla|Runner.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\Runner.class" SelfReg="false" Sequence="6"/>
+    <ROW File="SConnection.class" Component_="SConnection.class" FileName="SConne~1.cla|SConnection.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\jsoup\SConnection.class" SelfReg="false" Sequence="28"/>
+    <ROW File="SEntity.class" Component_="SEntity_Handler.class" FileName="SEntit~2.cla|SEntity.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\lucene\SEntity.class" SelfReg="false" Sequence="31"/>
+    <ROW File="SEntity_Handler.class" Component_="SEntity_Handler.class" FileName="SEntit~1.cla|SEntity$Handler.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\lucene\SEntity$Handler.class" SelfReg="false" Sequence="30"/>
+    <ROW File="SJsoup.class" Component_="SConnection.class" FileName="SJsoup~1.cla|SJsoup.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\jsoup\SJsoup.class" SelfReg="false" Sequence="29"/>
+    <ROW File="Spider.class" Component_="Spider.class" FileName="Spider~1.cla|Spider.class" Attributes="0" SourcePath="..\bin\com\bewsia\schema\Spider.class" SelfReg="false" Sequence="19"/>
+    <ROW File="Thumbs.db" Component_="bewsia_16x16.png" FileName="Thumbs.db" Attributes="2" SourcePath="..\bin\com\bewsia\resource\images\Thumbs.db" SelfReg="false" Sequence="15"/>
+    <ROW File="UITool.class" Component_="CodeTool.class" FileName="UITool~1.cla|UITool.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\UITool.class" SelfReg="false" Sequence="7"/>
+    <ROW File="amazon_category.js" Component_="amazon_category.js" FileName="amazon~1.js|amazon-category.js" Attributes="0" SourcePath="..\dat\script\amazon-category.js" SelfReg="false" Sequence="94"/>
+    <ROW File="amazon_product.js" Component_="amazon_category.js" FileName="amazon~2.js|amazon-product.js" Attributes="0" SourcePath="..\dat\script\amazon-product.js" SelfReg="false" Sequence="95"/>
+    <ROW File="bewsia_16x16.png" Component_="bewsia_16x16.png" FileName="bewsia~1.png|bewsia-16x16.png" Attributes="0" SourcePath="..\bin\com\bewsia\resource\images\bewsia-16x16.png" SelfReg="false" Sequence="14"/>
+    <ROW File="commons_beanutils_1.8.0.jar" Component_="jsoup_1.3.3.jar" FileName="common~1.jar|commons-beanutils-1.8.0.jar" Attributes="0" SourcePath="..\lib\json\commons-beanutils-1.8.0.jar" SelfReg="false" Sequence="76"/>
+    <ROW File="commons_collections_3.2.1.jar" Component_="jsoup_1.3.3.jar" FileName="common~2.jar|commons-collections-3.2.1.jar" Attributes="0" SourcePath="..\lib\json\commons-collections-3.2.1.jar" SelfReg="false" Sequence="77"/>
+    <ROW File="commons_lang_2.5.jar" Component_="jsoup_1.3.3.jar" FileName="common~3.jar|commons-lang-2.5.jar" Attributes="0" SourcePath="..\lib\json\commons-lang-2.5.jar" SelfReg="false" Sequence="78"/>
+    <ROW File="commons_logging_1.1.1.jar" Component_="jsoup_1.3.3.jar" FileName="common~4.jar|commons-logging-1.1.1.jar" Attributes="0" SourcePath="..\lib\json\commons-logging-1.1.1.jar" SelfReg="false" Sequence="79"/>
+    <ROW File="config.properties" Component_="config.properties" FileName="config~1.pro|config.properties" Attributes="0" SourcePath="..\cfg\config.properties" SelfReg="false" Sequence="92"/>
+    <ROW File="ezmorph_1.0.6.jar" Component_="jsoup_1.3.3.jar" FileName="ezmorp~1.jar|ezmorph-1.0.6.jar" Attributes="0" SourcePath="..\lib\json\ezmorph-1.0.6.jar" SelfReg="false" Sequence="80"/>
+    <ROW File="jface.jar" Component_="jsoup_1.3.3.jar" FileName="jface.jar" Attributes="1" SourcePath="..\lib\jface.jar" SelfReg="false" Sequence="86"/>
+    <ROW File="jfacetext.jar" Component_="jsoup_1.3.3.jar" FileName="jfacet~1.jar|jfacetext.jar" Attributes="1" SourcePath="..\lib\jfacetext.jar" SelfReg="false" Sequence="87"/>
+    <ROW File="js.jar" Component_="jsoup_1.3.3.jar" FileName="js.jar" Attributes="0" SourcePath="..\lib\rhino\js.jar" SelfReg="false" Sequence="85"/>
+    <ROW File="json_lib_2.4_jdk15.jar" Component_="jsoup_1.3.3.jar" FileName="json-l~1.jar|json-lib-2.4-jdk15.jar" Attributes="0" SourcePath="..\lib\json\json-lib-2.4-jdk15.jar" SelfReg="false" Sequence="81"/>
+    <ROW File="jsoup_1.3.3.jar" Component_="jsoup_1.3.3.jar" FileName="jsoup-~1.jar|jsoup-1.3.3.jar" Attributes="1" SourcePath="..\lib\jsoup-1.3.3.jar" SelfReg="false" Sequence="73"/>
+    <ROW File="log4j_1.2.8.jar" Component_="jsoup_1.3.3.jar" FileName="log4j-~1.jar|log4j-1.2.8.jar" Attributes="1" SourcePath="..\lib\log4j-1.2.8.jar" SelfReg="false" Sequence="74"/>
+    <ROW File="log_conf.xml" Component_="config.properties" FileName="log-conf.xml" Attributes="0" SourcePath="..\cfg\log-conf.xml" SelfReg="false" Sequence="93"/>
+    <ROW File="lucene_core_3.6.0.jar" Component_="jsoup_1.3.3.jar" FileName="lucene~1.jar|lucene-core-3.6.0.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-core-3.6.0.jar" SelfReg="false" Sequence="82"/>
+    <ROW File="lucene_highlighter_3.6.0.jar" Component_="jsoup_1.3.3.jar" FileName="lucene~2.jar|lucene-highlighter-3.6.0.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-highlighter-3.6.0.jar" SelfReg="false" Sequence="83"/>
+    <ROW File="lucene_memory_3.6.0.jar" Component_="jsoup_1.3.3.jar" FileName="lucene~3.jar|lucene-memory-3.6.0.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-memory-3.6.0.jar" SelfReg="false" Sequence="84"/>
+    <ROW File="mail.jar" Component_="jsoup_1.3.3.jar" FileName="mail.jar" Attributes="0" SourcePath="..\lib\mail.jar" SelfReg="false" Sequence="75"/>
+    <ROW File="osgi.jar" Component_="jsoup_1.3.3.jar" FileName="osgi.jar" Attributes="1" SourcePath="..\lib\osgi.jar" SelfReg="false" Sequence="88"/>
+    <ROW File="runtime.jar" Component_="jsoup_1.3.3.jar" FileName="runtime.jar" Attributes="1" SourcePath="..\lib\runtime.jar" SelfReg="false" Sequence="89"/>
+    <ROW File="swt.jar" Component_="jsoup_1.3.3.jar" FileName="swt.jar" Attributes="0" SourcePath="..\lib\swt.jar" SelfReg="false" Sequence="90"/>
+    <ROW File="text.jar" Component_="jsoup_1.3.3.jar" FileName="text.jar" Attributes="1" SourcePath="..\lib\text.jar" SelfReg="false" Sequence="91"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="Bewsia.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install" ExeName="Bewsia-Installer"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_FRAGS&gt;FolderDlg.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_FRAGS&gt;UI.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="banner_image.jpg" SourcePath="&lt;AI_RES&gt;banner-image.jpg"/>
+    <ROW Name="dialog_image.jpg" SourcePath="&lt;AI_RES&gt;dialog-image.jpg"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="3"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="log_DIR" Component_="log"/>
+    <ROW Directory_="engine_DIR" Component_="engine"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectJRE" Type="1" Source="aicustact.dll" Target="RequiredJreExists"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="Bewsia.exe" SourcePath="Bewsia.ico" Index="0"/>
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="Application_Type" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Class_Path" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[Bewsia_DIR];[#jsoup_1.3.3.jar];[#log4j_1.2.8.jar];[#mail.jar];[#commons_beanutils_1.8.0.jar];[#commons_collections_3.2.1.jar];[#commons_lang_2.5.jar];[#commons_logging_1.1.1.jar];[#ezmorph_1.0.6.jar];[#json_lib_2.4_jdk15.jar];[#lucene_core_3.6.0.jar];[#lucene_highlighter_3.6.0.jar];[#lucene_memory_3.6.0.jar];[#js.jar];[#jface.jar];[#jfacetext.jar];[#osgi.jar];[#runtime.jar];[#swt.jar];[#text.jar];" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Failure_Check" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Main_Class" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="com.bewsia.basic.Runner" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Maximum_Version" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="any" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Minimum_Version" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Minimum Version" Value="any" Action="0" Component_="Bewsia.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_DetectJRE" Condition="1" Sequence="399" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_DetectJRE" Condition="1" Sequence="399" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiJavaComponent">
+    <ROW Name="Bewsia.exe" Launcher="Bewsia.exe" MainClass="Main_Class" ClassPath="Class_Path" JREMin="Minimum_Version" JREMax="Maximum_Version" IconPath="Bewsia.ico" AppType="Application_Type" PlusList="APPDIR;" MinusList="#Bewsia.exe;" MacDescription="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2012" MacBundleId="com.[|Manufacturer].[|ProductName].[|CurrentJavaProductName]" FailureCheck="Failure_Check" UACExecutionLevel="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="AI_JREVERFOUND = 1" Description="[ProductName] cannot be installed on systems with JRE version smaller than [AI_MINJREVERSION]" DescriptionLocId="AI.LaunchCondition.Jre" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Bewsia" Directory_="SHORTCUTDIR" Name="Bewsia" Component_="Bewsia.exe" Target="[#Bewsia.exe]" Hotkey="0" Icon_="Bewsia.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Bewsia_Micro_Search_Engine_for_Desktop" Directory_="DesktopFolder" Name="Bewsia~1|Bewsia - Micro Search Engine for Desktop" Component_="Bewsia.exe" Target="[#Bewsia.exe]" Hotkey="0" Icon_="Bewsia.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Uninstall" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall" Component_="config.properties" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="Bewsia_DIR" SourcePath="..\bin"/>
+  </COMPONENT>
+</DOCUMENT>

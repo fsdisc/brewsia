@@ -1,0 +1,9 @@
+<tr class="result-item">
+  <td width="10px" style="border: none">&nbsp;</td>
+  <td>
+    <div class="title"><a href="$url$">$title$</a></div>
+    <div class="link">$url$</div>
+    <div class="desc">$desc$</div>
+  </td>
+  <td width="10px" style="border: none">&nbsp;</td>
+</tr>
