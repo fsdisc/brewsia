@@ -32,6 +32,7 @@
     <ROW Directory="jsoup_DIR" Directory_Parent="safe_DIR" DefaultDir="jsoup"/>
     <ROW Directory="log_DIR" Directory_Parent="APPDIR" DefaultDir="log"/>
     <ROW Directory="lucene_DIR" Directory_Parent="safe_DIR" DefaultDir="lucene"/>
+    <ROW Directory="mysql_DIR" Directory_Parent="safe_DIR" DefaultDir="mysql"/>
     <ROW Directory="resource_DIR" Directory_Parent="bewsia_DIR" DefaultDir="resource"/>
     <ROW Directory="safe_DIR" Directory_Parent="script_DIR" DefaultDir="safe"/>
     <ROW Directory="schema_DIR" Directory_Parent="bewsia_DIR" DefaultDir="schema"/>
@@ -50,6 +51,7 @@
     <ROW Component="SConnection.class" ComponentId="{58522CF5-EB86-4425-9981-9E4241F67ECC}" Directory_="jsoup_DIR" Attributes="0" KeyPath="SConnection.class" Type="0"/>
     <ROW Component="SEntity_Handler.class" ComponentId="{9F14772D-C70E-481A-A258-2B880A80525C}" Directory_="lucene_DIR" Attributes="0" KeyPath="SEntity_Handler.class" Type="0"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{92E9088A-0E3F-4ABB-B89C-56185B36A1EA}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SMySQL.class" ComponentId="{3FA3BC60-7C4A-422C-9940-338EB5BAAE62}" Directory_="mysql_DIR" Attributes="0" KeyPath="SMySQL.class" Type="0"/>
     <ROW Component="Spider.class" ComponentId="{A107E082-DDB4-4BEC-B7CA-351340EE4BF6}" Directory_="schema_DIR" Attributes="0" KeyPath="Spider.class" Type="0"/>
     <ROW Component="amazon_category.js" ComponentId="{EA2FF086-64EC-432E-BE47-2B46DAC9348D}" Directory_="script_1_DIR" Attributes="0" KeyPath="amazon_category.js" Type="0"/>
     <ROW Component="bewsia_16x16.png" ComponentId="{FA4169AA-DAC8-48FC-9402-41A2B7DAA1E8}" Directory_="images_DIR" Attributes="0" KeyPath="bewsia_16x16.png" Type="0"/>
@@ -59,7 +61,7 @@
     <ROW Component="log" ComponentId="{8217A2DD-5A34-4594-91FF-628F01867168}" Directory_="log_DIR" Attributes="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="Bewsia.exe CodeTool.class Home.txt Files.class bewsia_16x16.png Spider.class LuceneHandler_CreateTask.class SConnection.class SEntity_Handler.class AddEngineDialog_1.class jsoup_1.3.3.jar config.properties log amazon_category.js engine SHORTCUTDIR AI_ExePath"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="Bewsia.exe CodeTool.class Home.txt Files.class bewsia_16x16.png Spider.class LuceneHandler_CreateTask.class SConnection.class SEntity_Handler.class AddEngineDialog_1.class jsoup_1.3.3.jar config.properties log amazon_category.js engine SHORTCUTDIR AI_ExePath SMySQL.class"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -131,6 +133,7 @@
     <ROW File="SEntity.class" Component_="SEntity_Handler.class" FileName="SEntit~2.cla|SEntity.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\lucene\SEntity.class" SelfReg="false" Sequence="31"/>
     <ROW File="SEntity_Handler.class" Component_="SEntity_Handler.class" FileName="SEntit~1.cla|SEntity$Handler.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\lucene\SEntity$Handler.class" SelfReg="false" Sequence="30"/>
     <ROW File="SJsoup.class" Component_="SConnection.class" FileName="SJsoup~1.cla|SJsoup.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\jsoup\SJsoup.class" SelfReg="false" Sequence="29"/>
+    <ROW File="SMySQL.class" Component_="SMySQL.class" FileName="SMySQL~1.cla|SMySQL.class" Attributes="0" SourcePath="..\bin\com\bewsia\script\safe\mysql\SMySQL.class" SelfReg="false" Sequence="96"/>
     <ROW File="Spider.class" Component_="Spider.class" FileName="Spider~1.cla|Spider.class" Attributes="0" SourcePath="..\bin\com\bewsia\schema\Spider.class" SelfReg="false" Sequence="19"/>
     <ROW File="Thumbs.db" Component_="bewsia_16x16.png" FileName="Thumbs.db" Attributes="2" SourcePath="..\bin\com\bewsia\resource\images\Thumbs.db" SelfReg="false" Sequence="15"/>
     <ROW File="UITool.class" Component_="CodeTool.class" FileName="UITool~1.cla|UITool.class" Attributes="0" SourcePath="..\bin\com\bewsia\basic\UITool.class" SelfReg="false" Sequence="7"/>
@@ -154,6 +157,7 @@
     <ROW File="lucene_highlighter_3.6.0.jar" Component_="jsoup_1.3.3.jar" FileName="lucene~2.jar|lucene-highlighter-3.6.0.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-highlighter-3.6.0.jar" SelfReg="false" Sequence="83"/>
     <ROW File="lucene_memory_3.6.0.jar" Component_="jsoup_1.3.3.jar" FileName="lucene~3.jar|lucene-memory-3.6.0.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-memory-3.6.0.jar" SelfReg="false" Sequence="84"/>
     <ROW File="mail.jar" Component_="jsoup_1.3.3.jar" FileName="mail.jar" Attributes="0" SourcePath="..\lib\mail.jar" SelfReg="false" Sequence="75"/>
+    <ROW File="mysql_connector_java_5.1.18_bin.jar" Component_="jsoup_1.3.3.jar" FileName="mysql-~1.jar|mysql-connector-java-5.1.18-bin.jar" Attributes="0" SourcePath="..\lib\mysql\mysql-connector-java-5.1.18-bin.jar" SelfReg="false" Sequence="97"/>
     <ROW File="osgi.jar" Component_="jsoup_1.3.3.jar" FileName="osgi.jar" Attributes="1" SourcePath="..\lib\osgi.jar" SelfReg="false" Sequence="88"/>
     <ROW File="runtime.jar" Component_="jsoup_1.3.3.jar" FileName="runtime.jar" Attributes="1" SourcePath="..\lib\runtime.jar" SelfReg="false" Sequence="89"/>
     <ROW File="swt.jar" Component_="jsoup_1.3.3.jar" FileName="swt.jar" Attributes="0" SourcePath="..\lib\swt.jar" SelfReg="false" Sequence="90"/>
@@ -229,7 +233,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
     <ROW IniFile="Application_Type" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="Bewsia.exe"/>
-    <ROW IniFile="Class_Path" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[Bewsia_DIR];[#jsoup_1.3.3.jar];[#log4j_1.2.8.jar];[#mail.jar];[#commons_beanutils_1.8.0.jar];[#commons_collections_3.2.1.jar];[#commons_lang_2.5.jar];[#commons_logging_1.1.1.jar];[#ezmorph_1.0.6.jar];[#json_lib_2.4_jdk15.jar];[#lucene_core_3.6.0.jar];[#lucene_highlighter_3.6.0.jar];[#lucene_memory_3.6.0.jar];[#js.jar];[#jface.jar];[#jfacetext.jar];[#osgi.jar];[#runtime.jar];[#swt.jar];[#text.jar];" Action="0" Component_="Bewsia.exe"/>
+    <ROW IniFile="Class_Path" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[Bewsia_DIR];[#jsoup_1.3.3.jar];[#log4j_1.2.8.jar];[#mail.jar];[#commons_beanutils_1.8.0.jar];[#commons_collections_3.2.1.jar];[#commons_lang_2.5.jar];[#commons_logging_1.1.1.jar];[#ezmorph_1.0.6.jar];[#json_lib_2.4_jdk15.jar];[#lucene_core_3.6.0.jar];[#lucene_highlighter_3.6.0.jar];[#lucene_memory_3.6.0.jar];[#js.jar];[#jface.jar];[#jfacetext.jar];[#osgi.jar];[#runtime.jar];[#swt.jar];[#text.jar];[#mysql_connector_java_5.1.18_bin.jar];" Action="0" Component_="Bewsia.exe"/>
     <ROW IniFile="Failure_Check" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="Bewsia.exe"/>
     <ROW IniFile="Main_Class" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="com.bewsia.basic.Runner" Action="0" Component_="Bewsia.exe"/>
     <ROW IniFile="Maximum_Version" FileName="Bewsia.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="any" Action="0" Component_="Bewsia.exe"/>
