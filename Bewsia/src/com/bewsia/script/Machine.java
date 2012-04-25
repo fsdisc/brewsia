@@ -28,12 +28,16 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.SimpleTimeZone;
+import java.util.TimeZone;
 import java.util.UUID;
 
 import org.mozilla.javascript.ClassShutter;
@@ -43,6 +47,7 @@ import org.mozilla.javascript.Scriptable;
 
 import com.bewsia.script.safe.jsoup.SJsoup;
 import com.bewsia.script.safe.lucene.SEntity;
+import com.bewsia.script.safe.mysql.SMySQL;
 
 public class Machine {
 
@@ -106,6 +111,11 @@ public class Machine {
                     if ("org.apache.lucene.search.SortField".equals(className)) return true;
                     if (className.startsWith("java.util.Collections")) return true;
                     if ("java.util.LinkedHashSet".equals(className)) return true;
+                    if ("java.util.Locale".equals(className)) return true;
+                    if ("java.util.TimeZone".equals(className)) return true;
+                    if ("java.util.SimpleTimeZone".equals(className)) return true;
+                    if ("java.util.Calendar".equals(className)) return true;
+                    if ("java.util.GregorianCalendar".equals(className)) return true;
                     
                     return false;
                 }
@@ -244,8 +254,8 @@ public class Machine {
     	return new Date(time);
     }
     
-    public SimpleDateFormat newSimpleDateFormat() {
-    	return new SimpleDateFormat();
+    public SimpleDateFormat newDateFormat(String format) {
+    	return new SimpleDateFormat(format);
     }
     
     public byte[] decodeBase64(byte[] b) throws Exception {
@@ -272,6 +282,54 @@ public class Machine {
     		tag.add(item);
     	}
     	return tag;
+    }
+    
+    public SMySQL newMySQL() {
+    	return new SMySQL();
+    }
+    
+    public Locale newLocale(String language) {
+    	return new Locale(language);
+    }
+
+    public Locale newLocale(String language, String country) {
+    	return new Locale(language, country);
+    }
+
+    public Locale newLocale(String language, String country, String variant) {
+    	return new Locale(language, country, variant);
+    }
+    
+    public TimeZone newTimeZone(int rawOffset, String ID) {
+    	return new SimpleTimeZone(rawOffset, ID);
+    }
+
+    public TimeZone newTimeZone(int rawOffset, String ID, int startMonth, int startDay, int startDayOfWeek, int startTime, int endMonth, int endDay, int endDayOfWeek, int endTime) {
+    	return new SimpleTimeZone(rawOffset, ID, startMonth, startDay, startDayOfWeek, startTime, endMonth, endDay, endDayOfWeek, endTime);
+    }
+
+    public TimeZone newTimeZone(int rawOffset, String ID, int startMonth, int startDay, int startDayOfWeek, int startTime, int endMonth, int endDay, int endDayOfWeek, int endTime, int dstSavings) {
+    	return new SimpleTimeZone(rawOffset, ID, startMonth, startDay, startDayOfWeek, startTime, endMonth, endDay, endDayOfWeek, endTime, dstSavings);
+    }
+
+    public TimeZone newTimeZone(int rawOffset, String ID, int startMonth, int startDay, int startDayOfWeek, int startTime, int startTimeMode, int endMonth, int endDay, int endDayOfWeek, int endTime, int endTimeMode, int dstSavings) {
+    	return new SimpleTimeZone(rawOffset, ID, startMonth, startDay, startDayOfWeek, startTime, startTimeMode, endMonth, endDay, endDayOfWeek, endTime, endTimeMode, dstSavings);
+    }
+    
+    public Calendar newCalendar() {
+    	return Calendar.getInstance();
+    }
+
+    public Calendar newCalendar(Locale aLocale) {
+    	return Calendar.getInstance(aLocale);
+    }
+
+    public Calendar newCalendar(TimeZone zone) {
+    	return Calendar.getInstance(zone);
+    }
+
+    public Calendar newCalendar(TimeZone zone, Locale aLocale) {
+    	return Calendar.getInstance(zone, aLocale);
     }
     
     public Machine(Handler handler) {
