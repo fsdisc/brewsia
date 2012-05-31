@@ -45,6 +45,7 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.Scriptable;
 
+import com.bewsia.script.safe.disk.SDisk;
 import com.bewsia.script.safe.jsoup.SJsoup;
 import com.bewsia.script.safe.lucene.SEntity;
 import com.bewsia.script.safe.mysql.SMySQL;
@@ -330,6 +331,10 @@ public class Machine {
 
     public Calendar newCalendar(TimeZone zone, Locale aLocale) {
     	return Calendar.getInstance(zone, aLocale);
+    }
+    
+    public SDisk newDisk() {
+    	return new SDisk();
     }
     
     public Machine(Handler handler) {
