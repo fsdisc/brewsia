@@ -1,0 +1,1 @@
+Bewsia provides users mean to create micro search engine on their desktop. Based on Lucene and Rhino, Bewsia allow users to run their javascript spiders to collect web pages and index them.
